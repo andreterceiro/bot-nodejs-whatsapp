@@ -1,0 +1,4 @@
+node_modules
+tmp
+.wwebjs_cache/
+data.json
