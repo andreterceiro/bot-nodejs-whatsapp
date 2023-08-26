@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <meta charset="utf-8" />
+        <title></title>
+        <style>
+            #header-area {
+                padding-bottom: 10px;
+                margin-bottom: 10px;                
+                border-bottom: 1px solid #000;
+            }
+            #header-area span {
+                margin-right: 40px;
+            }
+            #header-area span{
+                font-size: 50px;
+            }
+
+            input[type=text] {
+                width: 500px;
+            }
+            .option {
+                padding-bottom: 10px;
+                margin-bottom: 10px;                
+            }
+            .regular-option {
+                border-bottom: 1px solid #000;
+            }
+            textarea {
+                width: 800px;
+            }
+        </style>
+    </head>
+    <body>
+        <form method="post" action="save" >
+            <div class="container">
+                <div class="row">
+                    <div id="header-area" class="col-12">
+                        <span class="col-4">
+                            <img src="images/company-logo.jpeg">
+                        </span>
+                        <span class="col-8 title">
+                            Admin area - company XYZ
+                        </span>
+                    </div>
+                </div>
+                <div class="row option regular-option">
+                    <div class="col-12 option-content">
+                        Welcome message: <br />
+                        <textarea name="welcome-message"><%= data.welcomeMessage %></textarea> 
+                    </div>
+                </div>
+                <div class="row option regular-option">
+                    <div class="col-12 option-content">
+                        Option 1 - question: <br /> 
+                        <textarea name="option-1-question"><%= data.option1.question %></textarea>
+                    </div>
+                </div>
+                <div class="row option regular-option">
+                    <div class="col-12 option-content">
+                        Option 1 - answer: <br />
+                        <textarea name="option-1-answer"><%= data.option1.answer %></textarea>
+                    </div>
+                </div>
+                <div class="row option regular-option">
+                    <div class="col-12 option-content">
+                        Option 2 - question: <br />
+                        <textarea name="option-2-question"><%= data.option2.question %></textarea>
+                    </div>
+                </div>
+                <div class="row option regular-option">
+                    <div class="col-12 option-content">
+                        Option 2 - answer: <br />
+                        <textarea name="option-2-answer"><%= data.option2.answer %></textarea>
+                    </div>
+                </div>
+                <div class="row option">
+                    <div class="col-12 option-content">
+                        Message that the bot did not understand - answer: <input type="text" name="message-that-the-boot-did-not-Understand"  value="<%= data.messageThatTheBotDidNotUnderstand %>" />
+                    </div>
+                </div>
+
+                <div class="row option">
+                    <div class="col-12 option-content">
+                        <input type="submit" value="Save" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
